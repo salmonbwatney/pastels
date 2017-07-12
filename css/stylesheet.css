@@ -1,13 +1,12 @@
 body {
-  font-size: 12px;
+  color: #888888
   background-color: #ffffff;
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.5em;
-  margin: 0;
 }
 
 p {
@@ -24,6 +23,53 @@ a .fa, a:hover .fa, a:focus .fa {
   vertical-align: middle
 }
 
+.h1, h1{
+  font-size: 3.8em;
+  line-height: 1.15em;
+}
+
+.h2, h2{
+  font-size: 2.6em;
+}
+
+.h3, h3{
+  font-size: 1.825em;
+  line-height: 1.4em;
+  margin: 20px 0 10px;
+}
+
+.h4, h4{
+  font-size: 1.3em;
+  line-height: 1.55em;
+}
+
+.h5, h5{
+  font-size: 1.25em;
+  line-height: 1.55em;
+  margin-bottom: 15px;
+}
+
+.h6, h6{
+  font-size: .9em;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  min-height: 32px;
+}
+
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+    font-size: 65%;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small,
+.h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+    font-weight: 200;
+    line-height: 1;
+    color: inherit;
+}
+
 .main {
   background: #FFFFFF;
   position: relative;
@@ -31,20 +77,34 @@ a .fa, a:hover .fa, a:focus .fa {
 }
 
 .main-raised {
-  margin: 100px 30px 0px;
+  margin: -60px 30px 0px;
   border-radius: 6px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-/*****************
- * 1. Navigation *
- *****************/
+.section-title {
+  font-size: 4rem;
+  padding-bottom: 25px;
+}
 
+.section-description {
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+/***
+* 1 - Navigation
+***/
 .navbar {
   border: 0;
   border-radius: 3px;
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
+}
+
+.navbar-default:not(.navbar-transparent) .navbar-nav>li>a.btn.btn-white.btn-simple {
+    color: #555
 }
 
 .navbar.navbar-transparent {
@@ -81,9 +141,9 @@ a .fa, a:hover .fa, a:focus .fa {
 }
 
 .navbar .navbar-nav > li > a {
-  color: #fa8072;
-  padding: 15px 10px;
-  margin: 7px 1px;
+  color: inherit;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-weight: 300;
   font-size: 14px;
   text-transform: none;
@@ -98,6 +158,22 @@ a .fa, a:hover .fa, a:focus .fa {
   .navbar .navbar-nav > li > a {
     padding: 15px 0 15px 0;
   }
+}
+
+.navbar .navbar-brand {
+    position: relative;
+    height: 50px;
+    line-height: 30px;
+    color: inherit;
+    padding: 10px 15px
+}
+
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:hover,
+.navbar .navbar-nav>li>a:focus,
+.navbar .navbar-nav>li>a:hover {
+    background-color: transparent;
+    color: inherit
 }
 
 .navbar .navbar-nav > li > a:hover,
@@ -247,9 +323,12 @@ a .fa, a:hover .fa, a:focus .fa {
   line-height: 1.42857;
 }
 
-.navbar, .navbar.navbar-default {
-  background-color: #ffffff;
-  color: #ffffff;
+.navbar,
+.navbar .dropdown-menu .active>a,
+.navbar.navbar-default,
+.navbar.navbar-default .dropdown-menu .active>a {
+    background-color: #FFF;
+    color: #555
 }
 
 .navbar .navbar-form .form-group input.form-control::-moz-placeholder,
@@ -293,6 +372,26 @@ a .fa, a:hover .fa, a:focus .fa {
   color: #000000;
 }
 
+.navbar.navbar-almond {
+  background-color: #f2ded3;
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine {
+  background-color: #fc9a7d;
+  color: #ffffff;
+}
+
+.navbar.navbar-peach {
+  background-color: #fdc3c2;
+  color: #ffffff;
+}
+
+.navbar-navbar-peach {
+  background-color: #ffc595;
+  color: #ffffff;
+}
+
 .navbar.navbar-white .navbar-form .form-group input.form-control::-moz-placeholder,
 .navbar.navbar-white .navbar-form input.form-control::-moz-placeholder {
   color: #ffffff;
@@ -326,6 +425,138 @@ a .fa, a:hover .fa, a:focus .fa {
   color: #ffffff;
 }
 
+.navbar.navbar-almond .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-almond .navbar-form input.form-control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-almond .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-almond .navbar-form input.form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-almond .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-almond .navbar-form input.form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-almond .dropdown-menu {
+  border-radius: 3px !important;
+}
+
+.navbar.navbar-almond .dropdown-menu li > a:hover, .navbar.navbar-white .dropdown-menu li > a:focus {
+  color: #FFFFFF;
+  background-color: #ffffff;
+}
+
+.navbar.navbar-almond .dropdown-menu .active > a {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.navbar.navbar-almond .dropdown-menu .active > a:hover, .navbar.navbar-white .dropdown-menu .active > a:focus {
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-tangerine .navbar-form input.form-control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-tangerine .navbar-form input.form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-tangerine .navbar-form input.form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine .dropdown-menu {
+  border-radius: 3px !important;
+}
+
+.navbar.navbar-tangerine .dropdown-menu li > a:hover, .navbar.navbar-white .dropdown-menu li > a:focus {
+  color: #FFFFFF;
+  background-color: #ffffff;
+}
+
+.navbar.navbar-tangerine .dropdown-menu .active > a {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.navbar.navbar-tangerine .dropdown-menu .active > a:hover, .navbar.navbar-white .dropdown-menu .active > a:focus {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu {
+  border-radius: 3px !important;
+}
+
+.navbar.navbar-peach .dropdown-menu li > a:hover, .navbar.navbar-white .dropdown-menu li > a:focus {
+  color: #FFFFFF;
+  background-color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu .active > a {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu .active > a:hover, .navbar.navbar-white .dropdown-menu .active > a:focus {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-peach .navbar-form input.form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu {
+  border-radius: 3px !important;
+}
+
+.navbar.navbar-peach .dropdown-menu li > a:hover, .navbar.navbar-white .dropdown-menu li > a:focus {
+  color: #FFFFFF;
+  background-color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu .active > a {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.navbar.navbar-peach .dropdown-menu .active > a:hover, .navbar.navbar-white .dropdown-menu .active > a:focus {
+  color: #ffffff;
+}
+
 .logo-container .brand {
   font-size: 14px;
   color: #a6a6a6;
@@ -346,9 +577,9 @@ a .fa, a:hover .fa, a:focus .fa {
   margin: 10px 0 10px 0
 }
 
-/**********************
-* 2 - Dropdown Menus *
-**********************/
+/***
+* 2 - Dropdowns
+***/
 
 .dropdown-menu {
   position: absolute;
@@ -391,23 +622,99 @@ a .fa, a:hover .fa, a:focus .fa {
  border-radius: 3px;
 }
 
-.dropdown-menu li a:hover,
-.dropdown-menu li a:focus,
-.dropdown-menu li a:active{
+.navbar-white .dropdown-menu li a:hover,
+.navbar-white .dropdown-menu li a:focus,
+.navbar-white .dropdown-menu li a:active{
  background-color: #fa8072;
  color: #ffffff;
 }
 
-.navbar .dropdown-menu li > a:hover,
-.navbar .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
-.navbar.navbar-default .dropdown-menu li > a:focus {
+.navbar-white  .dropdown-menu li > a:hover,
+.navbar-white  .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
+.navbar-white .navbar-default .dropdown-menu li > a:focus {
  color: #ffffff;
  background-color: #fa8072;
 }
 
-.navbar .dropdown-menu li > a:active {
+.navbar-white  .dropdown-menu li > a:active {
  color: #ffffff;
  background-color: #fa8072;
+}
+
+.navbar-almond .dropdown-menu li a:hover,
+.navbar-almond .dropdown-menu li a:focus,
+.navbar-almond .dropdown-menu li a:active{
+ background-color: #f2ded3;
+ color: #ffffff;
+}
+
+.navbar-almond  .dropdown-menu li > a:hover,
+.navbar-almond  .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
+.navbar-almond .navbar-default .dropdown-menu li > a:focus {
+ color: #ffffff;
+ background-color: #f2ded3;
+}
+
+.navbar-almond  .dropdown-menu li > a:active {
+ color: #ffffff;
+ background-color: #f2ded3;
+}
+
+.navbar-tangerine .dropdown-menu li a:hover,
+.navbar-tangerine .dropdown-menu li a:focus,
+.navbar-tangerine .dropdown-menu li a:active{
+ background-color: #fc9a7d;
+ color: #ffffff;
+}
+
+.navbar-tangerine  .dropdown-menu li > a:hover,
+.navbar-tangerine  .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
+.navbar-tangerine .navbar-default .dropdown-menu li > a:focus {
+ color: #ffffff;
+ background-color: #fc9a7d;
+}
+
+.navbar-tangerine  .dropdown-menu li > a:active {
+ color: #ffffff;
+ background-color: #fc9a7d;
+}
+
+.navbar-peach .dropdown-menu li a:hover,
+.navbar-peach .dropdown-menu li a:focus,
+.navbar-peach .dropdown-menu li a:active{
+ background-color: #fdc3c2;
+ color: #ffffff;
+}
+
+.navbar-peach  .dropdown-menu li > a:hover,
+.navbar-peach  .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
+.navbar-peach .navbar-default .dropdown-menu li > a:focus {
+ color: #ffffff;
+ background-color: #fdc3c2;
+}
+
+.navbar-peach  .dropdown-menu li > a:active {
+ color: #ffffff;
+ background-color: #fdc3c2;
+}
+
+.navbar-peach .dropdown-menu li a:hover,
+.navbar-peach .dropdown-menu li a:focus,
+.navbar-peach .dropdown-menu li a:active{
+ background-color: #ffc595;
+ color: #ffffff;
+}
+
+.navbar-peach  .dropdown-menu li > a:hover,
+.navbar-peach  .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover,
+.navbar-peach .navbar-default .dropdown-menu li > a:focus {
+ color: #ffffff;
+ background-color: #ffc595;
+}
+
+.navbar-peach  .dropdown-menu li > a:active {
+ color: #ffffff;
+ background-color: #ffc595;
 }
 
 /*************
@@ -481,7 +788,8 @@ header-filter{
   border-radius: none;
   position: relative;
   padding: 12px 15px;
-  margin: 10px 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   font-size: 14px;
   font-weight: 300;
   text-transform: none;
@@ -542,6 +850,17 @@ header-filter{
     font-size: 24px
 }
 
+.btn.btn-fab i.fa,
+.navbar .navbar-nav>li>a.btn.btn-fab i.fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-9px, -9px);
+    line-height: 18px;
+    width: 18px;
+    font-size: 18px
+}
+
 .btn.btn-fab .ripple-container,
 .navbar .navbar-nav>li>a.btn.btn-fab .ripple-container {
     border-radius: 50%
@@ -559,14 +878,14 @@ header-filter{
     width: 20px
 }
 
-.btn.btn-just-icon.btn-large,
-.navbar .navbar-nav>li>a.btn.btn-just-icon.btn-large {
+.btn.btn-just-icon.btn-lg,
+.navbar .navbar-nav>li>a.btn.btn-just-icon.btn-lg {
     font-size: 22px;
     padding: 13px 18px
 }
 
-.btn-group-small .btn.btn-fab,
-.btn-group-small .navbar .navbar-nav>li>a.btn.btn-fab,
+.btn-group-sm .btn.btn-fab,
+.btn-group-sm .navbar .navbar-nav>li>a.btn.btn-fab,
 .btn.btn-fab.btn-fab-mini,
 .navbar .navbar-nav>li>a.btn.btn-icon.btn-fab-mini {
     height: 40px;
@@ -574,33 +893,35 @@ header-filter{
     width: 40px
 }
 
-.btn-group-small .btn.btn-fab.material-icons,
-.btn-group-small .navbar .navbar-nav>li>a.btn.btn-fab.material-icons,
+.btn-group-sm .btn.btn-fab.material-icons,
+.btn-group-sm .navbar .navbar-nav>li>a.btn.btn-fab.material-icons,
 .btn.btn-fab.btn-fab-mini.material-icons,
-.navbar .navbar-nav>li>a.btn.btn-icon.btn-fab-mini.material-icons {
+.navbar .navbar-nav>li>a.btn.btn-icon.btn-fab-mini.material-icons,
+.btn.btn-fab.btn-fab-mini.fa,
+.navbar .navbar-nav>li>a.btn.btn-icon.btn-fab-mini.fa {
     top: -3.5px;
     left: -3.5px
 }
 
-.btn-group-small .btn.btn-icon .material-icons,
-.btn-group-small .navbar .navbar-nav>li>a.btn.btn-icon .material-icons,
+.btn-group-sm .btn.btn-icon .material-icons,
+.btn-group-sm .navbar .navbar-nav>li>a.btn.btn-icon .material-icons,
 .btn.btn-icon.btn-icon-mini .material-icons,
 .navbar .navbar-nav>li>a.btn.btn-icon.btn-icon-mini .material-icons {
     font-size: 17px
 }
 
-.btn-group-small .btn,
-.btn-group-small .navbar .navbar-nav>li>a.btn,
-.btn.btn-small,
-.navbar .navbar-nav>li>a.btn.btn-small {
+.btn-group-sm .btn,
+.btn-group-sm .navbar .navbar-nav>li>a.btn,
+.btn.btn-sm,
+.navbar .navbar-nav>li>a.btn.btn-sm {
     padding: 5px 20px;
     font-size: 11px
 }
 
-.btn-group-large .btn,
-.btn-group-large .navbar .navbar-nav>li>a.btn,
-.btn.btn-large,
-.navbar .navbar-nav>li>a.btn.btn-large {
+.btn-group-lg .btn,
+.btn-group-lg .navbar .navbar-nav>li>a.btn,
+.btn.btn-lg,
+.navbar .navbar-nav>li>a.btn.btn-lg {
     font-size: 14px;
     padding: 18px 36px
 }
@@ -628,6 +949,1666 @@ header-filter{
   border: 0;
 }
 
+.btn.btn-almond, .btn.btn-almond:hover, .btn.btn-almond:focus, .btn.btn-almond:active, .btn.btn-almond.active, .btn.btn-almond:active:focus, .btn.btn-almond:active:hover, .btn.btn-almond.active:focus, .btn.btn-almond.active:hover, .open > .btn.btn-almond.dropdown-toggle, .open > .btn.btn-almond.dropdown-toggle:focus, .open > .btn.btn-almond.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond,
+.navbar .navbar-nav > li 12px.btn.btn-almond:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond:active,
+.navbar .navbar-nav > li > a.btn.btn-almond.active,
+.navbar .navbar-nav > li > a.btn.btn-almond:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond.dropdown-toggle:hover {
+  background: 0 0;
+  color: #f2ded3;
+}
+
+.btn.btn-almond,
+.navbar .navbar-nav > li > a.btn.btn-almond {
+  background: 0 0;
+  color: #f2ded3;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-almond:hover, .btn.btn-almond:focus, .btn.btn-almond:active,
+.navbar .navbar-nav > li > a.btn.btn-almond:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond:active {
+  background: 0 0;
+  color: #f2ded3;
+}
+
+.btn.btn-almond-fc, .btn.btn-almond-fc:hover, .btn.btn-almond-fc:focus, .btn.btn-almond-fc:active, .btn.btn-almond-fc.active, .btn.btn-almond-fc:active:focus, .btn.btn-almond-fc:active:hover, .btn.btn-almond-fc.active:focus, .btn.btn-almond-fc.active:hover, .open > .btn.btn-almond-fc.dropdown-toggle, .open > .btn.btn-almond-fc.dropdown-toggle:focus, .open > .btn.btn-almond-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc,
+.navbar .navbar-nav > li 12px.btn.btn-almond-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-fc.dropdown-toggle:hover {
+  background-color: #f2ded3;
+  color: #fff;
+  border: 1px solid #f2ded3;
+}
+
+.btn.btn-almond-fc,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc {
+  background-color: #f2ded3;
+  border: 1px solid #f2ded3;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-almond-fc:hover, .btn.btn-almond-fc:focus, .btn.btn-almond-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-fc:active {
+  background-color: #f2ded3;
+  border: 1px solid #f2ded3;
+  color: #fff;
+}
+
+.btn.btn-almond-mo, .btn.btn-almond-mo:hover, .btn.btn-almond-mo:focus, .btn.btn-almond-mo:active, .btn.btn-almond-mo.active, .btn.btn-almond-mo:active:focus, .btn.btn-almond-mo:active:hover, .btn.btn-almond-mo.active:focus, .btn.btn-almond-mo.active:hover, .open > .btn.btn-almond-mo.dropdown-toggle, .open > .btn.btn-almond-mo.dropdown-toggle:focus, .open > .btn.btn-almond-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo,
+.navbar .navbar-nav > li 12px.btn.btn-almond-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-mo.dropdown-toggle:hover {
+  background-color: #f2ded3;
+  color: #fff;
+  border: 1px solid #f2ded3;
+}
+
+.btn.btn-almond-mo,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo {
+  background: 0 0;
+  color: #f2ded3;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-almond-mo:hover, .btn.btn-almond-mo:focus, .btn.btn-almond-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-mo:active {
+  background-color: #f2ded3;
+  border: 1px solid #f2ded3;
+  color: #fff;
+}
+
+.btn.btn-almond-outline, .btn.btn-almond-outline:hover, .btn.btn-almond-outline:focus, .btn.btn-almond-outline:active, .btn.btn-almond-outline.active, .btn.btn-almond-outline:active:focus, .btn.btn-almond-outline:active:hover, .btn.btn-almond-outline.active:focus, .btn.btn-almond-outline.active:hover, .open > .btn.btn-almond-outline.dropdown-toggle, .open > .btn.btn-almond-outline.dropdown-toggle:focus, .open > .btn.btn-almond-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline,
+.navbar .navbar-nav > li 12px.btn.btn-almond-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-almond-outline.dropdown-toggle:hover {
+  background-color: #f2ded3;
+  color: #fff;
+  border: 1px solid #f2ded3;
+}
+
+.btn.btn-almond-outline,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline {
+  background: 0 0;
+  border: 1px solid #f2ded3;
+  color: #f2ded3;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-almond-outline:hover, .btn.btn-almond-outline:focus, .btn.btn-almond-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-almond-outline:active {
+  background-color: #f2ded3;
+  border: 1px solid #f2ded3;
+  color: #fff;
+}
+
+.btn.btn-tangerine, .btn.btn-tangerine:hover, .btn.btn-tangerine:focus, .btn.btn-tangerine:active, .btn.btn-tangerine.active, .btn.btn-tangerine:active:focus, .btn.btn-tangerine:active:hover, .btn.btn-tangerine.active:focus, .btn.btn-tangerine.active:hover, .open > .btn.btn-tangerine.dropdown-toggle, .open > .btn.btn-tangerine.dropdown-toggle:focus, .open > .btn.btn-tangerine.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine,
+.navbar .navbar-nav > li 12px.btn.btn-tangerine:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine.active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine.dropdown-toggle:hover {
+  background: 0 0;
+  color: #fc9a7d;
+}
+
+.btn.btn-tangerine,
+.navbar .navbar-nav > li > a.btn.btn-tangerine {
+  background: 0 0;
+  color: #fc9a7d;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-tangerine:hover, .btn.btn-tangerine:focus, .btn.btn-tangerine:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine:active {
+  background: 0 0;
+  color: #fc9a7d;
+}
+
+.btn.btn-tangerine-fc, .btn.btn-tangerine-fc:hover, .btn.btn-tangerine-fc:focus, .btn.btn-tangerine-fc:active, .btn.btn-tangerine-fc.active, .btn.btn-tangerine-fc:active:focus, .btn.btn-tangerine-fc:active:hover, .btn.btn-tangerine-fc.active:focus, .btn.btn-tangerine-fc.active:hover, .open > .btn.btn-tangerine-fc.dropdown-toggle, .open > .btn.btn-tangerine-fc.dropdown-toggle:focus, .open > .btn.btn-tangerine-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc,
+.navbar .navbar-nav > li 12px.btn.btn-tangerine-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc.dropdown-toggle:hover {
+  background-color: #fc9a7d;
+  color: #fff;
+  border: 1px solid #fc9a7d;
+}
+
+.btn.btn-tangerine-fc,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc {
+  background-color: #fc9a7d;
+  border: 1px solid #fc9a7d;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-tangerine-fc:hover, .btn.btn-tangerine-fc:focus, .btn.btn-tangerine-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-fc:active {
+  background-color: #fc9a7d;
+  border: 1px solid #fc9a7d;
+  color: #fff;
+}
+
+.btn.btn-tangerine-mo, .btn.btn-tangerine-mo:hover, .btn.btn-tangerine-mo:focus, .btn.btn-tangerine-mo:active, .btn.btn-tangerine-mo.active, .btn.btn-tangerine-mo:active:focus, .btn.btn-tangerine-mo:active:hover, .btn.btn-tangerine-mo.active:focus, .btn.btn-tangerine-mo.active:hover, .open > .btn.btn-tangerine-mo.dropdown-toggle, .open > .btn.btn-tangerine-mo.dropdown-toggle:focus, .open > .btn.btn-tangerine-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo,
+.navbar .navbar-nav > li 12px.btn.btn-tangerine-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo.dropdown-toggle:hover {
+  background-color: #fc9a7d;
+  color: #fff;
+  border: 1px solid #fc9a7d;
+}
+
+.btn.btn-tangerine-mo,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo {
+  background: 0 0;
+  color: #fc9a7d;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-tangerine-mo:hover, .btn.btn-tangerine-mo:focus, .btn.btn-tangerine-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-mo:active {
+  background-color: #fc9a7d;
+  border: 1px solid #fc9a7d;
+  color: #fff;
+}
+
+.btn.btn-tangerine-outline, .btn.btn-tangerine-outline:hover, .btn.btn-tangerine-outline:focus, .btn.btn-tangerine-outline:active, .btn.btn-tangerine-outline.active, .btn.btn-tangerine-outline:active:focus, .btn.btn-tangerine-outline:active:hover, .btn.btn-tangerine-outline.active:focus, .btn.btn-tangerine-outline.active:hover, .open > .btn.btn-tangerine-outline.dropdown-toggle, .open > .btn.btn-tangerine-outline.dropdown-toggle:focus, .open > .btn.btn-tangerine-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline,
+.navbar .navbar-nav > li 12px.btn.btn-tangerine-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline.dropdown-toggle:hover {
+  background-color: #fc9a7d;
+  color: #fff;
+  border: 1px solid #fc9a7d;
+}
+
+.btn.btn-tangerine-outline,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline {
+  background: 0 0;
+  border: 1px solid #fc9a7d;
+  color: #fc9a7d;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-tangerine-outline:hover, .btn.btn-tangerine-outline:focus, .btn.btn-tangerine-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-tangerine-outline:active {
+  background-color: #fc9a7d;
+  border: 1px solid #fc9a7d;
+  color: #fff;
+}
+
+.btn.btn-pink, .btn.btn-pink:hover, .btn.btn-pink:focus, .btn.btn-pink:active, .btn.btn-pink.active, .btn.btn-pink:active:focus, .btn.btn-pink:active:hover, .btn.btn-pink.active:focus, .btn.btn-pink.active:hover, .open > .btn.btn-pink.dropdown-toggle, .open > .btn.btn-pink.dropdown-toggle:focus, .open > .btn.btn-pink.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink,
+.navbar .navbar-nav > li 12px.btn.btn-pink:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink:active,
+.navbar .navbar-nav > li > a.btn.btn-pink.active,
+.navbar .navbar-nav > li > a.btn.btn-pink:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink.dropdown-toggle:hover {
+  background: 0 0;
+  color: #fdc3c2;
+}
+
+.btn.btn-pink,
+.navbar .navbar-nav > li > a.btn.btn-pink {
+  background: 0 0;
+  color: #fdc3c2;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-pink:hover, .btn.btn-pink:focus, .btn.btn-pink:active,
+.navbar .navbar-nav > li > a.btn.btn-pink:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink:active {
+  background: 0 0;
+  color: #fdc3c2;
+}
+
+.btn.btn-pink-fc, .btn.btn-pink-fc:hover, .btn.btn-pink-fc:focus, .btn.btn-pink-fc:active, .btn.btn-pink-fc.active, .btn.btn-pink-fc:active:focus, .btn.btn-pink-fc:active:hover, .btn.btn-pink-fc.active:focus, .btn.btn-pink-fc.active:hover, .open > .btn.btn-pink-fc.dropdown-toggle, .open > .btn.btn-pink-fc.dropdown-toggle:focus, .open > .btn.btn-pink-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc,
+.navbar .navbar-nav > li 12px.btn.btn-pink-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-fc.dropdown-toggle:hover {
+  background-color: #fdc3c2;
+  color: #fff;
+  border: 1px solid #fdc3c2;
+}
+
+.btn.btn-pink-fc,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc {
+  background-color: #fdc3c2;
+  border: 1px solid #fdc3c2;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-pink-fc:hover, .btn.btn-pink-fc:focus, .btn.btn-pink-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-fc:active {
+  background-color: #fdc3c2;
+  border: 1px solid #fdc3c2;
+  color: #fff;
+}
+
+.btn.btn-pink-mo, .btn.btn-pink-mo:hover, .btn.btn-pink-mo:focus, .btn.btn-pink-mo:active, .btn.btn-pink-mo.active, .btn.btn-pink-mo:active:focus, .btn.btn-pink-mo:active:hover, .btn.btn-pink-mo.active:focus, .btn.btn-pink-mo.active:hover, .open > .btn.btn-pink-mo.dropdown-toggle, .open > .btn.btn-pink-mo.dropdown-toggle:focus, .open > .btn.btn-pink-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo,
+.navbar .navbar-nav > li 12px.btn.btn-pink-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-mo.dropdown-toggle:hover {
+  background-color: #fdc3c2;
+  color: #fff;
+  border: 1px solid #fdc3c2;
+}
+
+.btn.btn-pink-mo,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo {
+  background: 0 0;
+  color: #fdc3c2;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-pink-mo:hover, .btn.btn-pink-mo:focus, .btn.btn-pink-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-mo:active {
+  background-color: #fdc3c2;
+  border: 1px solid #fdc3c2;
+  color: #fff;
+}
+
+.btn.btn-pink-outline, .btn.btn-pink-outline:hover, .btn.btn-pink-outline:focus, .btn.btn-pink-outline:active, .btn.btn-pink-outline.active, .btn.btn-pink-outline:active:focus, .btn.btn-pink-outline:active:hover, .btn.btn-pink-outline.active:focus, .btn.btn-pink-outline.active:hover, .open > .btn.btn-pink-outline.dropdown-toggle, .open > .btn.btn-pink-outline.dropdown-toggle:focus, .open > .btn.btn-pink-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline,
+.navbar .navbar-nav > li 12px.btn.btn-pink-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-pink-outline.dropdown-toggle:hover {
+  background-color: #fdc3c2;
+  color: #fff;
+  border: 1px solid #fdc3c2;
+}
+
+.btn.btn-pink-outline,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline {
+  background: 0 0;
+  border: 1px solid #fdc3c2;
+  color: #fdc3c2;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-pink-outline:hover, .btn.btn-pink-outline:focus, .btn.btn-pink-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-pink-outline:active {
+  background-color: #fdc3c2;
+  border: 1px solid #fdc3c2;
+  color: #fff;
+}
+
+.btn.btn-peach, .btn.btn-peach:hover, .btn.btn-peach:focus, .btn.btn-peach:active, .btn.btn-peach.active, .btn.btn-peach:active:focus, .btn.btn-peach:active:hover, .btn.btn-peach.active:focus, .btn.btn-peach.active:hover, .open > .btn.btn-peach.dropdown-toggle, .open > .btn.btn-peach.dropdown-toggle:focus, .open > .btn.btn-peach.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach,
+.navbar .navbar-nav > li 12px.btn.btn-peach:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach:active,
+.navbar .navbar-nav > li > a.btn.btn-peach.active,
+.navbar .navbar-nav > li > a.btn.btn-peach:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach.dropdown-toggle:hover {
+  background: 0 0;
+  color: #ffc595;
+}
+
+.btn.btn-peach,
+.navbar .navbar-nav > li > a.btn.btn-peach {
+  background: 0 0;
+  color: #ffc595;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-peach:hover, .btn.btn-peach:focus, .btn.btn-peach:active,
+.navbar .navbar-nav > li > a.btn.btn-peach:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach:active {
+  background: 0 0;
+  color: #ffc595;
+}
+
+.btn.btn-peach-fc, .btn.btn-peach-fc:hover, .btn.btn-peach-fc:focus, .btn.btn-peach-fc:active, .btn.btn-peach-fc.active, .btn.btn-peach-fc:active:focus, .btn.btn-peach-fc:active:hover, .btn.btn-peach-fc.active:focus, .btn.btn-peach-fc.active:hover, .open > .btn.btn-peach-fc.dropdown-toggle, .open > .btn.btn-peach-fc.dropdown-toggle:focus, .open > .btn.btn-peach-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc,
+.navbar .navbar-nav > li 12px.btn.btn-peach-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-fc.dropdown-toggle:hover {
+  background-color: #ffc595;
+  color: #fff;
+  border: 1px solid #ffc595;
+}
+
+.btn.btn-peach-fc,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc {
+  background-color: #ffc595;
+  border: 1px solid #ffc595;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-peach-fc:hover, .btn.btn-peach-fc:focus, .btn.btn-peach-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-fc:active {
+  background-color: #ffc595;
+  border: 1px solid #ffc595;
+  color: #fff;
+}
+
+.btn.btn-peach-mo, .btn.btn-peach-mo:hover, .btn.btn-peach-mo:focus, .btn.btn-peach-mo:active, .btn.btn-peach-mo.active, .btn.btn-peach-mo:active:focus, .btn.btn-peach-mo:active:hover, .btn.btn-peach-mo.active:focus, .btn.btn-peach-mo.active:hover, .open > .btn.btn-peach-mo.dropdown-toggle, .open > .btn.btn-peach-mo.dropdown-toggle:focus, .open > .btn.btn-peach-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo,
+.navbar .navbar-nav > li 12px.btn.btn-peach-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-mo.dropdown-toggle:hover {
+  background-color: #ffc595;
+  color: #fff;
+  border: 1px solid #ffc595;
+}
+
+.btn.btn-peach-mo,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo {
+  background: 0 0;
+  color: #ffc595;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-peach-mo:hover, .btn.btn-peach-mo:focus, .btn.btn-peach-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-mo:active {
+  background-color: #ffc595;
+  border: 1px solid #ffc595;
+  color: #fff;
+}
+
+.btn.btn-peach-outline, .btn.btn-peach-outline:hover, .btn.btn-peach-outline:focus, .btn.btn-peach-outline:active, .btn.btn-peach-outline.active, .btn.btn-peach-outline:active:focus, .btn.btn-peach-outline:active:hover, .btn.btn-peach-outline.active:focus, .btn.btn-peach-outline.active:hover, .open > .btn.btn-peach-outline.dropdown-toggle, .open > .btn.btn-peach-outline.dropdown-toggle:focus, .open > .btn.btn-peach-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline,
+.navbar .navbar-nav > li 12px.btn.btn-peach-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-peach-outline.dropdown-toggle:hover {
+  background-color: #ffc595;
+  color: #fff;
+  border: 1px solid #ffc595;
+}
+
+.btn.btn-peach-outline,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline {
+  background: 0 0;
+  border: 1px solid #ffc595;
+  color: #ffc595;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-peach-outline:hover, .btn.btn-peach-outline:focus, .btn.btn-peach-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-peach-outline:active {
+  background-color: #ffc595;
+  border: 1px solid #ffc595;
+  color: #fff;
+}
+
+/* Moments Colour Collection */
+.btn.btn-softamber, .btn.btn-softamber:hover, .btn.btn-softamber:focus, .btn.btn-softamber:active, .btn.btn-softamber.active, .btn.btn-softamber:active:focus, .btn.btn-softamber:active:hover, .btn.btn-softamber.active:focus, .btn.btn-softamber.active:hover, .open > .btn.btn-softamber.dropdown-toggle, .open > .btn.btn-softamber.dropdown-toggle:focus, .open > .btn.btn-softamber.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber,
+.navbar .navbar-nav > li 12px.btn.btn-softamber:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber.active,
+.navbar .navbar-nav > li > a.btn.btn-softamber:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber.dropdown-toggle:hover {
+  background: 0 0;
+  color: #cec5b4;
+}
+
+.btn.btn-softamber,
+.navbar .navbar-nav > li > a.btn.btn-softamber {
+  background: 0 0;
+  color: #cec5b4;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-softamber:hover, .btn.btn-softamber:focus, .btn.btn-softamber:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber:active {
+  background: 0 0;
+  color: #cec5b4;
+}
+
+.btn.btn-softamber-fc, .btn.btn-softamber-fc:hover, .btn.btn-softamber-fc:focus, .btn.btn-softamber-fc:active, .btn.btn-softamber-fc.active, .btn.btn-softamber-fc:active:focus, .btn.btn-softamber-fc:active:hover, .btn.btn-softamber-fc.active:focus, .btn.btn-softamber-fc.active:hover, .open > .btn.btn-softamber-fc.dropdown-toggle, .open > .btn.btn-softamber-fc.dropdown-toggle:focus, .open > .btn.btn-softamber-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc,
+.navbar .navbar-nav > li 12px.btn.btn-softamber-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc.dropdown-toggle:hover {
+  background-color: #cec5b4;
+  color: #fff;
+  border: 1px solid #cec5b4;
+}
+
+.btn.btn-softamber-fc,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc {
+  background-color: #cec5b4;
+  border: 1px solid #cec5b4;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-softamber-fc:hover, .btn.btn-softamber-fc:focus, .btn.btn-softamber-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-fc:active {
+  background-color: #cec5b4;
+  border: 1px solid #cec5b4;
+  color: #fff;
+}
+
+.btn.btn-softamber-mo, .btn.btn-softamber-mo:hover, .btn.btn-softamber-mo:focus, .btn.btn-softamber-mo:active, .btn.btn-softamber-mo.active, .btn.btn-softamber-mo:active:focus, .btn.btn-softamber-mo:active:hover, .btn.btn-softamber-mo.active:focus, .btn.btn-softamber-mo.active:hover, .open > .btn.btn-softamber-mo.dropdown-toggle, .open > .btn.btn-softamber-mo.dropdown-toggle:focus, .open > .btn.btn-softamber-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo,
+.navbar .navbar-nav > li 12px.btn.btn-softamber-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo.dropdown-toggle:hover {
+  background-color: #cec5b4;
+  color: #fff;
+  border: 1px solid #cec5b4;
+}
+
+.btn.btn-softamber-mo,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo {
+  background: 0 0;
+  color: #cec5b4;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-softamber-mo:hover, .btn.btn-softamber-mo:focus, .btn.btn-softamber-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-mo:active {
+  background-color: #cec5b4;
+  border: 1px solid #cec5b4;
+  color: #fff;
+}
+
+.btn.btn-softamber-outline, .btn.btn-softamber-outline:hover, .btn.btn-softamber-outline:focus, .btn.btn-softamber-outline:active, .btn.btn-softamber-outline.active, .btn.btn-softamber-outline:active:focus, .btn.btn-softamber-outline:active:hover, .btn.btn-softamber-outline.active:focus, .btn.btn-softamber-outline.active:hover, .open > .btn.btn-softamber-outline.dropdown-toggle, .open > .btn.btn-softamber-outline.dropdown-toggle:focus, .open > .btn.btn-softamber-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline,
+.navbar .navbar-nav > li 12px.btn.btn-softamber-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline.dropdown-toggle:hover {
+  background-color: #cec5b4;
+  color: #fff;
+  border: 1px solid #cec5b4;
+}
+
+.btn.btn-softamber-outline,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline {
+  background: 0 0;
+  border: 1px solid #cec5b4;
+  color: #cec5b4;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-softamber-outline:hover, .btn.btn-softamber-outline:focus, .btn.btn-softamber-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-softamber-outline:active {
+  background-color: #cec5b4;
+  border: 1px solid #cec5b4;
+  color: #fff;
+}
+
+.btn.btn-greynurse, .btn.btn-greynurse:hover, .btn.btn-greynurse:focus, .btn.btn-greynurse:active, .btn.btn-greynurse.active, .btn.btn-greynurse:active:focus, .btn.btn-greynurse:active:hover, .btn.btn-greynurse.active:focus, .btn.btn-greynurse.active:hover, .open > .btn.btn-greynurse.dropdown-toggle, .open > .btn.btn-greynurse.dropdown-toggle:focus, .open > .btn.btn-greynurse.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse,
+.navbar .navbar-nav > li 12px.btn.btn-greynurse:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse.active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse.dropdown-toggle:hover {
+  background: 0 0;
+  color: #e4e6e1;
+}
+
+.btn.btn-greynurse,
+.navbar .navbar-nav > li > a.btn.btn-greynurse {
+  background: 0 0;
+  color: #e4e6e1;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-greynurse:hover, .btn.btn-greynurse:focus, .btn.btn-greynurse:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse:active {
+  background: 0 0;
+  color: #e4e6e1;
+}
+
+.btn.btn-greynurse-fc, .btn.btn-greynurse-fc:hover, .btn.btn-greynurse-fc:focus, .btn.btn-greynurse-fc:active, .btn.btn-greynurse-fc.active, .btn.btn-greynurse-fc:active:focus, .btn.btn-greynurse-fc:active:hover, .btn.btn-greynurse-fc.active:focus, .btn.btn-greynurse-fc.active:hover, .open > .btn.btn-greynurse-fc.dropdown-toggle, .open > .btn.btn-greynurse-fc.dropdown-toggle:focus, .open > .btn.btn-greynurse-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc,
+.navbar .navbar-nav > li 12px.btn.btn-greynurse-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc.dropdown-toggle:hover {
+  background-color: #e4e6e1;
+  color: #676767;
+  border: 1px solid #e4e6e1;
+}
+
+.btn.btn-greynurse-fc,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc {
+  background-color: #e4e6e1;
+  border: 1px solid #e4e6e1;
+  color: #676767;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-greynurse-fc:hover, .btn.btn-greynurse-fc:focus, .btn.btn-greynurse-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-fc:active {
+  background-color: #e4e6e1;
+  border: 1px solid #e4e6e1;
+  color: #676767;
+}
+
+.btn.btn-greynurse-mo, .btn.btn-greynurse-mo:hover, .btn.btn-greynurse-mo:focus, .btn.btn-greynurse-mo:active, .btn.btn-greynurse-mo.active, .btn.btn-greynurse-mo:active:focus, .btn.btn-greynurse-mo:active:hover, .btn.btn-greynurse-mo.active:focus, .btn.btn-greynurse-mo.active:hover, .open > .btn.btn-greynurse-mo.dropdown-toggle, .open > .btn.btn-greynurse-mo.dropdown-toggle:focus, .open > .btn.btn-greynurse-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo,
+.navbar .navbar-nav > li 12px.btn.btn-greynurse-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo.dropdown-toggle:hover {
+  background-color: #e4e6e1;
+  color: #676767;
+  border: 1px solid #e4e6e1;
+}
+
+.btn.btn-greynurse-mo,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo {
+  background: 0 0;
+  color: #e4e6e1;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-greynurse-mo:hover, .btn.btn-greynurse-mo:focus, .btn.btn-greynurse-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-mo:active {
+  background-color: #e4e6e1;
+  border: 1px solid #e4e6e1;
+  color: #676767;
+}
+
+.btn.btn-greynurse-outline, .btn.btn-greynurse-outline:hover, .btn.btn-greynurse-outline:focus, .btn.btn-greynurse-outline:active, .btn.btn-greynurse-outline.active, .btn.btn-greynurse-outline:active:focus, .btn.btn-greynurse-outline:active:hover, .btn.btn-greynurse-outline.active:focus, .btn.btn-greynurse-outline.active:hover, .open > .btn.btn-greynurse-outline.dropdown-toggle, .open > .btn.btn-greynurse-outline.dropdown-toggle:focus, .open > .btn.btn-greynurse-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline,
+.navbar .navbar-nav > li 12px.btn.btn-greynurse-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline.dropdown-toggle:hover {
+  background-color: #e4e6e1;
+  color: #676767;
+  border: 1px solid #e4e6e1;
+}
+
+.btn.btn-greynurse-outline,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline {
+  background: 0 0;
+  border: 1px solid #e4e6e1;
+  color: #e4e6e1;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-greynurse-outline:hover, .btn.btn-greynurse-outline:focus, .btn.btn-greynurse-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-greynurse-outline:active {
+  background-color: #e4e6e1;
+  border: 1px solid #e4e6e1;
+  color: #676767;
+}
+
+.btn.btn-donkeybrown, .btn.btn-donkeybrown:hover, .btn.btn-donkeybrown:focus, .btn.btn-donkeybrown:active, .btn.btn-donkeybrown.active, .btn.btn-donkeybrown:active:focus, .btn.btn-donkeybrown:active:hover, .btn.btn-donkeybrown.active:focus, .btn.btn-donkeybrown.active:hover, .open > .btn.btn-donkeybrown.dropdown-toggle, .open > .btn.btn-donkeybrown.dropdown-toggle:focus, .open > .btn.btn-donkeybrown.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown,
+.navbar .navbar-nav > li 12px.btn.btn-donkeybrown:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown.dropdown-toggle:hover {
+  background: 0 0;
+  color: #a89374;
+}
+
+.btn.btn-donkeybrown,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown {
+  background: 0 0;
+  color: #a89374;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-donkeybrown:hover, .btn.btn-donkeybrown:focus, .btn.btn-donkeybrown:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown:active {
+  background: 0 0;
+  color: #a89374;
+}
+
+.btn.btn-donkeybrown-fc, .btn.btn-donkeybrown-fc:hover, .btn.btn-donkeybrown-fc:focus, .btn.donkeybtn-donkeybrown-fc:active, .btn.btn-donkeybrown-fc.active, .btn.btn-donkeybrown-fc:active:focus, .btn.btn-donkeybrown-fc:active:hover, .btn.btn-donkeybrown-fc.active:focus, .btn.btn-donkeybrown-fc.active:hover, .open > .btn.btn-donkeybrown-fc.dropdown-toggle, .open > .btn.btn-donkeybrown-fc.dropdown-toggle:focus, .open > .btn.btn-donkeybrown-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc,
+.navbar .navbar-nav > li 12px.btn.btn-donkeybrown-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc.dropdown-toggle:hover {
+  background-color: #a89374;
+  color: #fff;
+  border: 1px solid #a89374;
+}
+
+.btn.btn-donkeybrown-fc,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc {
+  background-color: #a89374;
+  border: 1px solid #a89374;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-donkeybrown-fc:hover, .btn.btn-donkeybrown-fc:focus, .btn.btn-donkeybrown-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-fc:active {
+  background-color: #a89374;
+  border: 1px solid #a89374;
+  color: #fff;
+}
+
+.btn.btn-donkeybrown-mo, .btn.btn-donkeybrown-mo:hover, .btn.btn-donkeybrown-mo:focus, .btn.btn-donkeybrown-mo:active, .btn.btn-donkeybrown-mo.active, .btn.btn-donkeybrown-mo:active:focus, .btn.btn-donkeybrown-mo:active:hover, .btn.btn-donkeybrown-mo.active:focus, .btn.btn-donkeybrown-mo.active:hover, .open > .btn.btn-donkeybrown-mo.dropdown-toggle, .open > .btn.btn-donkeybrown-mo.dropdown-toggle:focus, .open > .btn.btn-donkeybrown-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo,
+.navbar .navbar-nav > li 12px.btn.btn-donkeybrown-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo.dropdown-toggle:hover {
+  background-color: #a89374;
+  color: #fff;
+  border: 1px solid #a89374;
+}
+
+.btn.btn-donkeybrown-mo,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo {
+  background: 0 0;
+  color: #a89374;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-donkeybrown-mo:hover, .btn.btn-donkeybrown-mo:focus, .btn.btn-donkeybrown-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-mo:active {
+  background-color: #a89374;
+  border: 1px solid #a89374;
+  color: #fff;
+}
+
+.btn.btn-donkeybrown-outline, .btn.btn-donkeybrown-outline:hover, .btn.btn-donkeybrown-outline:focus, .btn.btn-donkeybrown-outline:active, .btn.btn-donkeybrown-outline.active, .btn.btn-donkeybrown-outline:active:focus, .btn.btn-donkeybrown-outline:active:hover, .btn.btn-donkeybrown-outline.active:focus, .btn.btn-donkeybrown-outline.active:hover, .open > .btn.btn-donkeybrown-outline.dropdown-toggle, .open > .btn.btn-donkeybrown-outline.dropdown-toggle:focus, .open > .btn.btn-donkeybrown-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline,
+.navbar .navbar-nav > li 12px.btn.btn-donkeybrown-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline.dropdown-toggle:hover {
+  background-color: #a89374;
+  color: #fff;
+  border: 1px solid #a89374;
+}
+
+.btn.btn-donkeybrown-outline,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline {
+  background: 0 0;
+  border: 1px solid #a89374;
+  color: #a89374;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-donkeybrown-outline:hover, .btn.btn-donkeybrown-outline:focus, .btn.btn-donkeybrown-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-donkeybrown-outline:active {
+  background-color: #a89374;
+  border: 1px solid #a89374;
+  color: #fff;
+}
+
+.btn.btn-limedspruce, .btn.btn-limedspruce:hover, .btn.btn-limedspruce:focus, .btn.btn-limedspruce:active, .btn.btn-limedspruce.active, .btn.btn-limedspruce:active:focus, .btn.btn-limedspruce:active:hover, .btn.btn-limedspruce.active:focus, .btn.btn-limedspruce.active:hover, .open > .btn.btn-limedspruce.dropdown-toggle, .open > .btn.btn-limedspruce.dropdown-toggle:focus, .open > .btn.btn-limedspruce.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce,
+.navbar .navbar-nav > li 12px.btn.btn-limedspruce:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce.dropdown-toggle:hover {
+  background: 0 0;
+  color: #3e4c57;
+}
+
+.btn.btn-limedspruce,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce {
+  background: 0 0;
+  color: #3e4c57;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-limedspruce:hover, .btn.btn-limedspruce:focus, .btn.btn-limedspruce:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce:active {
+  background: 0 0;
+  color: #3e4c57;
+}
+
+.btn.btn-limedspruce-fc, .btn.btn-limedspruce-fc:hover, .btn.btn-limedspruce-fc:focus, .btn.donkeybtn-limedspruce-fc:active, .btn.btn-limedspruce-fc.active, .btn.btn-limedspruce-fc:active:focus, .btn.btn-limedspruce-fc:active:hover, .btn.btn-limedspruce-fc.active:focus, .btn.btn-limedspruce-fc.active:hover, .open > .btn.btn-limedspruce-fc.dropdown-toggle, .open > .btn.btn-limedspruce-fc.dropdown-toggle:focus, .open > .btn.btn-limedspruce-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc,
+.navbar .navbar-nav > li 12px.btn.btn-limedspruce-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc.dropdown-toggle:hover {
+  background-color: #3e4c57;
+  color: #fff;
+  border: 1px solid #3e4c57;
+}
+
+.btn.btn-limedspruce-fc,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc {
+  background-color: #3e4c57;
+  border: 1px solid #3e4c57;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-limedspruce-fc:hover, .btn.btn-limedspruce-fc:focus, .btn.btn-limedspruce-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-fc:active {
+  background-color: #3e4c57;
+  border: 1px solid #3e4c57;
+  color: #fff;
+}
+
+.btn.btn-limedspruce-mo, .btn.btn-limedspruce-mo:hover, .btn.btn-limedspruce-mo:focus, .btn.btn-limedspruce-mo:active, .btn.btn-limedspruce-mo.active, .btn.btn-limedspruce-mo:active:focus, .btn.btn-limedspruce-mo:active:hover, .btn.btn-limedspruce-mo.active:focus, .btn.btn-limedspruce-mo.active:hover, .open > .btn.btn-limedspruce-mo.dropdown-toggle, .open > .btn.btn-limedspruce-mo.dropdown-toggle:focus, .open > .btn.btn-limedspruce-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo,
+.navbar .navbar-nav > li 12px.btn.btn-limedspruce-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo.dropdown-toggle:hover {
+  background-color: #3e4c57;
+  color: #fff;
+  border: 1px solid #3e4c57;
+}
+
+.btn.btn-limedspruce-mo,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo {
+  background: 0 0;
+  color: #3e4c57;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-limedspruce-mo:hover, .btn.btn-limedspruce-mo:focus, .btn.btn-limedspruce-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-mo:active {
+  background-color: #3e4c57;
+  border: 1px solid #3e4c57;
+  color: #fff;
+}
+
+.btn.btn-limedspruce-outline, .btn.btn-limedspruce-outline:hover, .btn.btn-limedspruce-outline:focus, .btn.btn-limedspruce-outline:active, .btn.btn-limedspruce-outline.active, .btn.btn-limedspruce-outline:active:focus, .btn.btn-limedspruce-outline:active:hover, .btn.btn-limedspruce-outline.active:focus, .btn.btn-limedspruce-outline.active:hover, .open > .btn.btn-limedspruce-outline.dropdown-toggle, .open > .btn.btn-limedspruce-outline.dropdown-toggle:focus, .open > .btn.btn-limedspruce-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline,
+.navbar .navbar-nav > li 12px.btn.btn-limedspruce-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline.dropdown-toggle:hover {
+  background-color: #3e4c57;
+  color: #fff;
+  border: 1px solid #3e4c57;
+}
+
+.btn.btn-limedspruce-outline,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline {
+  background: 0 0;
+  border: 1px solid #3e4c57;
+  color: #3e4c57;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-limedspruce-outline:hover, .btn.btn-limedspruce-outline:focus, .btn.btn-limedspruce-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-limedspruce-outline:active {
+  background-color: #3e4c57;
+  border: 1px solid #3e4c57;
+  color: #fff;
+}
+
+/* Abstract Colour Collection */
+
+.btn.btn-terracotta, .btn.btn-terracotta:hover, .btn.btn-terracotta:focus, .btn.btn-terracotta:active, .btn.btn-terracotta.active, .btn.btn-terracotta:active:focus, .btn.btn-terracotta:active:hover, .btn.btn-terracotta.active:focus, .btn.btn-terracotta.active:hover, .open > .btn.btn-terracotta.dropdown-toggle, .open > .btn.btn-terracotta.dropdown-toggle:focus, .open > .btn.btn-terracotta.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta,
+.navbar .navbar-nav > li 12px.btn.btn-terracotta:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta.active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta.dropdown-toggle:hover {
+  background: 0 0;
+  color: #dc6e53;
+}
+
+.btn.btn-terracotta,
+.navbar .navbar-nav > li > a.btn.btn-terracotta {
+  background: 0 0;
+  color: #dc6e53;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-terracotta:hover, .btn.btn-terracotta:focus, .btn.btn-terracotta:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta:active {
+  background: 0 0;
+  color: #dc6e53;
+}
+
+.btn.btn-terracotta-fc, .btn.btn-terracotta-fc:hover, .btn.btn-terracotta-fc:focus, .btn.btn-terracotta-fc:active, .btn.btn-terracotta-fc.active, .btn.btn-terracotta-fc:active:focus, .btn.btn-terracotta-fc:active:hover, .btn.btn-terracotta-fc.active:focus, .btn.btn-terracotta-fc.active:hover, .open > .btn.btn-terracotta-fc.dropdown-toggle, .open > .btn.btn-terracotta-fc.dropdown-toggle:focus, .open > .btn.btn-terracotta-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc,
+.navbar .navbar-nav > li 12px.btn.btn-terracotta-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc.dropdown-toggle:hover {
+  background-color: #dc6e53;
+  color: #fff;
+  border: 1px solid #dc6e53;
+}
+
+.btn.btn-terracotta-fc,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc {
+  background-color: #dc6e53;
+  border: 1px solid #dc6e53;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-terracotta-fc:hover, .btn.btn-terracotta-fc:focus, .btn.btn-terracotta-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-fc:active {
+  background-color: #dc6e53;
+  border: 1px solid #dc6e53;
+  color: #fff;
+}
+
+.btn.btn-terracotta-mo, .btn.btn-terracotta-mo:hover, .btn.btn-terracotta-mo:focus, .btn.btn-terracotta-mo:active, .btn.btn-terracotta-mo.active, .btn.btn-terracotta-mo:active:focus, .btn.btn-terracotta-mo:active:hover, .btn.btn-terracotta-mo.active:focus, .btn.btn-terracotta-mo.active:hover, .open > .btn.btn-terracotta-mo.dropdown-toggle, .open > .btn.btn-terracotta-mo.dropdown-toggle:focus, .open > .btn.btn-terracotta-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo,
+.navbar .navbar-nav > li 12px.btn.btn-terracotta-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo.dropdown-toggle:hover {
+  background-color: #dc6e53;
+  color: #fff;
+  border: 1px solid #dc6e53;
+}
+
+.btn.btn-terracotta-mo,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo {
+  background: 0 0;
+  color: #dc6e53;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-terracotta-mo:hover, .btn.btn-terracotta-mo:focus, .btn.btn-terracotta-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-mo:active {
+  background-color: #dc6e53;
+  border: 1px solid #dc6e53;
+  color: #fff;
+}
+
+.btn.btn-terracotta-outline, .btn.btn-terracotta-outline:hover, .btn.btn-terracotta-outline:focus, .btn.btn-terracotta-outline:active, .btn.btn-terracotta-outline.active, .btn.btn-terracotta-outline:active:focus, .btn.btn-terracotta-outline:active:hover, .btn.btn-terracotta-outline.active:focus, .btn.btn-terracotta-outline.active:hover, .open > .btn.btn-terracotta-outline.dropdown-toggle, .open > .btn.btn-terracotta-outline.dropdown-toggle:focus, .open > .btn.btn-terracotta-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline,
+.navbar .navbar-nav > li 12px.btn.btn-terracotta-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline.dropdown-toggle:hover {
+  background-color: #dc6e53;
+  color: #fff;
+  border: 1px solid #dc6e53;
+}
+
+.btn.btn-terracotta-outline,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline {
+  background: 0 0;
+  border: 1px solid #dc6e53;
+  color: #dc6e53;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-terracotta-outline:hover, .btn.btn-terracotta-outline:focus, .btn.btn-terracotta-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-terracotta-outline:active {
+  background-color: #dc6e53;
+  border: 1px solid #dc6e53;
+  color: #fff;
+}
+
+.btn.btn-goldendream, .btn.btn-goldendream:hover, .btn.btn-goldendream:focus, .btn.btn-goldendream:active, .btn.btn-goldendream.active, .btn.btn-goldendream:active:focus, .btn.btn-goldendream:active:hover, .btn.btn-goldendream.active:focus, .btn.btn-goldendream.active:hover, .open > .btn.btn-goldendream.dropdown-toggle, .open > .btn.btn-goldendream.dropdown-toggle:focus, .open > .btn.btn-goldendream.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream,
+.navbar .navbar-nav > li 12px.btn.btn-goldendream:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream.active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream.dropdown-toggle:hover {
+  background: 0 0;
+  color: #e9d038;
+}
+
+.btn.btn-goldendream,
+.navbar .navbar-nav > li > a.btn.btn-goldendream {
+  background: 0 0;
+  color: #e9d038;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-goldendream:hover, .btn.btn-goldendream:focus, .btn.btn-goldendream:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream:active {
+  background: 0 0;
+  color: #e9d038;
+}
+
+.btn.btn-goldendream-fc, .btn.btn-goldendream-fc:hover, .btn.btn-goldendream-fc:focus, .btn.btn-goldendream-fc:active, .btn.btn-goldendream-fc.active, .btn.btn-goldendream-fc:active:focus, .btn.btn-goldendream-fc:active:hover, .btn.btn-goldendream-fc.active:focus, .btn.btn-goldendream-fc.active:hover, .open > .btn.btn-goldendream-fc.dropdown-toggle, .open > .btn.btn-goldendream-fc.dropdown-toggle:focus, .open > .btn.btn-goldendream-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc,
+.navbar .navbar-nav > li 12px.btn.btn-goldendream-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc.dropdown-toggle:hover {
+  background-color: #e9d038;
+  color: #fff;
+  border: 1px solid #e9d038;
+}
+
+.btn.btn-goldendream-fc,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc {
+  background-color: #e9d038;
+  border: 1px solid #e9d038;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-goldendream-fc:hover, .btn.btn-goldendream-fc:focus, .btn.btn-goldendream-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-fc:active {
+  background-color: #e9d038;
+  border: 1px solid #e9d038;
+  color: #fff;
+}
+
+.btn.btn-goldendream-mo, .btn.btn-goldendream-mo:hover, .btn.btn-goldendream-mo:focus, .btn.btn-goldendream-mo:active, .btn.btn-goldendream-mo.active, .btn.btn-goldendream-mo:active:focus, .btn.btn-goldendream-mo:active:hover, .btn.btn-goldendream-mo.active:focus, .btn.btn-goldendream-mo.active:hover, .open > .btn.btn-goldendream-mo.dropdown-toggle, .open > .btn.btn-goldendream-mo.dropdown-toggle:focus, .open > .btn.btn-goldendream-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo,
+.navbar .navbar-nav > li 12px.btn.btn-goldendream-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo.dropdown-toggle:hover {
+  background-color: #e9d038;
+  color: #fff;
+  border: 1px solid #e9d038;
+}
+
+.btn.btn-goldendream-mo,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo {
+  background: 0 0;
+  color: #e9d038;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-goldendream-mo:hover, .btn.btn-goldendream-mo:focus, .btn.btn-goldendream-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-mo:active {
+  background-color: #e9d038;
+  border: 1px solid #e9d038;
+  color: #fff;
+}
+
+.btn.btn-goldendream-outline, .btn.btn-goldendream-outline:hover, .btn.btn-goldendream-outline:focus, .btn.btn-goldendream-outline:active, .btn.btn-goldendream-outline.active, .btn.btn-goldendream-outline:active:focus, .btn.btn-goldendream-outline:active:hover, .btn.btn-goldendream-outline.active:focus, .btn.btn-goldendream-outline.active:hover, .open > .btn.btn-goldendream-outline.dropdown-toggle, .open > .btn.btn-goldendream-outline.dropdown-toggle:focus, .open > .btn.btn-goldendream-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline,
+.navbar .navbar-nav > li 12px.btn.btn-goldendream-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline.dropdown-toggle:hover {
+  background-color: #e9d038;
+  color: #fff;
+  border: 1px solid #e9d038;
+}
+
+.btn.btn-goldendream-outline,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline {
+  background: 0 0;
+  border: 1px solid #e9d038;
+  color: #e9d038;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-goldendream-outline:hover, .btn.btn-goldendream-outline:focus, .btn.btn-goldendream-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-goldendream-outline:active {
+  background-color: #e9d038;
+  border: 1px solid #e9d038;
+  color: #fff;
+}
+
+.btn.btn-edgewater, .btn.btn-edgewater:hover, .btn.btn-edgewater:focus, .btn.btn-edgewater:active, .btn.btn-edgewater.active, .btn.btn-edgewater:active:focus, .btn.btn-edgewater:active:hover, .btn.btn-edgewater.active:focus, .btn.btn-edgewater.active:hover, .open > .btn.btn-edgewater.dropdown-toggle, .open > .btn.btn-edgewater.dropdown-toggle:focus, .open > .btn.btn-edgewater.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater,
+.navbar .navbar-nav > li 12px.btn.btn-edgewater:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater.active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater.dropdown-toggle:hover {
+  background: 0 0;
+  color: #bbdfd5;
+}
+
+.btn.btn-edgewater,
+.navbar .navbar-nav > li > a.btn.btn-edgewater {
+  background: 0 0;
+  color: #bbdfd5;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-edgewater:hover, .btn.btn-edgewater:focus, .btn.btn-edgewater:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater:active {
+  background: 0 0;
+  color: #bbdfd5;
+}
+
+.btn.btn-edgewater-fc, .btn.btn-edgewater-fc:hover, .btn.btn-edgewater-fc:focus, .btn.btn-edgewater-fc:active, .btn.btn-edgewater-fc.active, .btn.btn-edgewater-fc:active:focus, .btn.btn-edgewater-fc:active:hover, .btn.btn-edgewater-fc.active:focus, .btn.btn-edgewater-fc.active:hover, .open > .btn.btn-edgewater-fc.dropdown-toggle, .open > .btn.btn-edgewater-fc.dropdown-toggle:focus, .open > .btn.btn-edgewater-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc,
+.navbar .navbar-nav > li 12px.btn.btn-edgewater-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc.dropdown-toggle:hover {
+  background-color: #bbdfd5;
+  color: #fff;
+  border: 1px solid #bbdfd5;
+}
+
+.btn.btn-edgewater-fc,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc {
+  background-color: #bbdfd5;
+  border: 1px solid #bbdfd5;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-edgewater-fc:hover, .btn.btn-edgewater-fc:focus, .btn.btn-edgewater-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-fc:active {
+  background-color: #bbdfd5;
+  border: 1px solid #bbdfd5;
+  color: #fff;
+}
+
+.btn.btn-edgewater-mo, .btn.btn-edgewater-mo:hover, .btn.btn-edgewater-mo:focus, .btn.btn-edgewater-mo:active, .btn.btn-edgewater-mo.active, .btn.btn-edgewater-mo:active:focus, .btn.btn-edgewater-mo:active:hover, .btn.btn-edgewater-mo.active:focus, .btn.btn-edgewater-mo.active:hover, .open > .btn.btn-edgewater-mo.dropdown-toggle, .open > .btn.btn-edgewater-mo.dropdown-toggle:focus, .open > .btn.btn-edgewater-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo,
+.navbar .navbar-nav > li 12px.btn.btn-edgewater-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo.dropdown-toggle:hover {
+  background-color: #bbdfd5;
+  color: #fff;
+  border: 1px solid #bbdfd5;
+}
+
+.btn.btn-edgewater-mo,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo {
+  background: 0 0;
+  color: #bbdfd5;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-edgewater-mo:hover, .btn.btn-edgewater-mo:focus, .btn.btn-edgewater-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-mo:active {
+  background-color: #bbdfd5;
+  border: 1px solid #bbdfd5;
+  color: #fff;
+}
+
+.btn.btn-edgewater-outline, .btn.btn-edgewater-outline:hover, .btn.btn-edgewater-outline:focus, .btn.btn-edgewater-outline:active, .btn.btn-edgewater-outline.active, .btn.btn-edgewater-outline:active:focus, .btn.btn-edgewater-outline:active:hover, .btn.btn-edgewater-outline.active:focus, .btn.btn-edgewater-outline.active:hover, .open > .btn.btn-edgewater-outline.dropdown-toggle, .open > .btn.btn-edgewater-outline.dropdown-toggle:focus, .open > .btn.btn-edgewater-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline,
+.navbar .navbar-nav > li 12px.btn.btn-edgewater-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline.dropdown-toggle:hover {
+  background-color: #bbdfd5;
+  color: #fff;
+  border: 1px solid #bbdfd5;
+}
+
+.btn.btn-edgewater-outline,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline {
+  background: 0 0;
+  border: 1px solid #bbdfd5;
+  color: #bbdfd5;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-edgewater-outline:hover, .btn.btn-edgewater-outline:focus, .btn.btn-edgewater-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-edgewater-outline:active {
+  background-color: #bbdfd5;
+  border: 1px solid #bbdfd5;
+  color: #fff;
+}
+
+.btn.btn-surfcrest, .btn.btn-surfcrest:hover, .btn.btn-surfcrest:focus, .btn.btn-surfcrest:active, .btn.btn-surfcrest.active, .btn.btn-surfcrest:active:focus, .btn.btn-surfcrest:active:hover, .btn.btn-surfcrest.active:focus, .btn.btn-surfcrest.active:hover, .open > .btn.btn-surfcrest.dropdown-toggle, .open > .btn.btn-surfcrest.dropdown-toggle:focus, .open > .btn.btn-surfcrest.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest,
+.navbar .navbar-nav > li 12px.btn.btn-surfcrest:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest.dropdown-toggle:hover {
+  background: 0 0;
+  color: #cee6d0;
+}
+
+.btn.btn-surfcrest,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest {
+  background: 0 0;
+  color: #cee6d0;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-surfcrest:hover, .btn.btn-surfcrest:focus, .btn.btn-surfcrest:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest:active {
+  background: 0 0;
+  color: #cee6d0;
+}
+
+.btn.btn-surfcrest-fc, .btn.btn-surfcrest-fc:hover, .btn.btn-surfcrest-fc:focus, .btn.btn-surfcrest-fc:active, .btn.btn-surfcrest-fc.active, .btn.btn-surfcrest-fc:active:focus, .btn.btn-surfcrest-fc:active:hover, .btn.btn-surfcrest-fc.active:focus, .btn.btn-surfcrest-fc.active:hover, .open > .btn.btn-surfcrest-fc.dropdown-toggle, .open > .btn.btn-surfcrest-fc.dropdown-toggle:focus, .open > .btn.btn-surfcrest-fc.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc,
+.navbar .navbar-nav > li 12px.btn.btn-surfcrest-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc.dropdown-toggle:hover {
+  background-color: #cee6d0;
+  color: #fff;
+  border: 1px solid #cee6d0;
+}
+
+.btn.btn-surfcrest-fc,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc {
+  background-color: #cee6d0;
+  border: 1px solid #cee6d0;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: none;
+}
+.btn.btn-surfcrest-fc:hover, .btn.btn-surfcrest-fc:focus, .btn.btn-surfcrest-fc:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-fc:active {
+  background-color: #cee6d0;
+  border: 1px solid #cee6d0;
+  color: #fff;
+}
+
+.btn.btn-surfcrest-mo, .btn.btn-surfcrest-mo:hover, .btn.btn-surfcrest-mo:focus, .btn.btn-surfcrest-mo:active, .btn.btn-surfcrest-mo.active, .btn.btn-surfcrest-mo:active:focus, .btn.btn-surfcrest-mo:active:hover, .btn.btn-surfcrest-mo.active:focus, .btn.btn-surfcrest-mo.active:hover, .open > .btn.btn-surfcrest-mo.dropdown-toggle, .open > .btn.btn-surfcrest-mo.dropdown-toggle:focus, .open > .btn.btn-surfcrest-mo.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo,
+.navbar .navbar-nav > li 12px.btn.btn-surfcrest-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo.dropdown-toggle:hover {
+  background-color: #cee6d0;
+  color: #fff;
+  border: 1px solid #cee6d0;
+}
+
+.btn.btn-surfcrest-mo,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo {
+  background: 0 0;
+  color: #cee6d0;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-surfcrest-mo:hover, .btn.btn-surfcrest-mo:focus, .btn.btn-surfcrest-mo:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-mo:active {
+  background-color: #cee6d0;
+  border: 1px solid #cee6d0;
+  color: #fff;
+}
+
+.btn.btn-surfcrest-outline, .btn.btn-surfcrest-outline:hover, .btn.btn-surfcrest-outline:focus, .btn.btn-surfcrest-outline:active, .btn.btn-surfcrest-outline.active, .btn.btn-surfcrest-outline:active:focus, .btn.btn-surfcrest-outline:active:hover, .btn.btn-surfcrest-outline.active:focus, .btn.btn-surfcrest-outline.active:hover, .open > .btn.btn-surfcrest-outline.dropdown-toggle, .open > .btn.btn-surfcrest-outline.dropdown-toggle:focus, .open > .btn.btn-surfcrest-outline.dropdown-toggle:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline,
+.navbar .navbar-nav > li 12px.btn.btn-surfcrest-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:active:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.active:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.active:hover, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.dropdown-toggle, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.dropdown-toggle:focus, .open >
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline.dropdown-toggle:hover {
+  background-color: #cee6d0;
+  color: #fff;
+  border: 1px solid #cee6d0;
+}
+
+.btn.btn-surfcrest-outline,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline {
+  background: 0 0;
+  border: 1px solid #cee6d0;
+  color: #cee6d0;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+.btn.btn-surfcrest-outline:hover, .btn.btn-surfcrest-outline:focus, .btn.btn-surfcrest-outline:active,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:hover,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:focus,
+.navbar .navbar-nav > li > a.btn.btn-surfcrest-outline:active {
+  background-color: #cee6d0;
+  border: 1px solid #cee6d0;
+  color: #fff;
+}
+
+/* Bootstrap Colour Collection */
 .btn.btn-default, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default.active, .btn.btn-default:active:focus, .btn.btn-default:active:hover, .btn.btn-default.active:focus, .btn.btn-default.active:hover, .open > .btn.btn-default.dropdown-toggle, .open > .btn.btn-default.dropdown-toggle:focus, .open > .btn.btn-default.dropdown-toggle:hover,
 .navbar .navbar-nav > li > a.btn.btn-default,
 .navbar .navbar-nav > li 12px.btn.btn-default:hover,
@@ -1307,13 +3288,13 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:focus, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:hover {
   background: 0 0;
-  color: #fcbe05;
+  color: #faee72;
 }
 
 .btn.btn-warning,
 .navbar .navbar-nav > li > a.btn.btn-warning {
   background: 0 0;
-  color: #fcbe05;
+  color: #faee72;
   font-weight: 300;
   box-shadow: none;
 }
@@ -1322,7 +3303,7 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning:focus,
 .navbar .navbar-nav > li > a.btn.btn-warning:active {
   background: 0 0;
-  color: #fcbe05;
+  color: #faee72;
 }
 
 .btn.btn-warning-fc, .btn.btn-warning-fc:hover, .btn.btn-warning-fc:focus, .btn.btn-warning-fc:active, .btn.btn-warning-fc.active, .btn.btn-warning-fc:active:focus, .btn.btn-warning-fc:active:hover, .btn.btn-warning-fc.active:focus, .btn.btn-warning-fc.active:hover, .open > .btn.btn-warning-fc.dropdown-toggle, .open > .btn.btn-warning-fc.dropdown-toggle:focus, .open > .btn.btn-warning-fc.dropdown-toggle:hover,
@@ -1338,15 +3319,15 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-fc.dropdown-toggle, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-fc.dropdown-toggle:focus, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-fc.dropdown-toggle:hover {
-  background-color: #fcbe05;
+  background-color: #faee72;
   color: #fff;
-  border: 1px solid #fcbe05;
+  border: 1px solid #faee72;
 }
 
 .btn.btn-warning-fc,
 .navbar .navbar-nav > li > a.btn.btn-warning-fc {
-  background-color: #fcbe05;
-  border: 1px solid #fcbe05;
+  background-color: #faee72;
+  border: 1px solid #faee72;
   color: #fff;
   font-weight: 300;
   box-shadow: none;
@@ -1355,8 +3336,8 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-fc:hover,
 .navbar .navbar-nav > li > a.btn.btn-warning-fc:focus,
 .navbar .navbar-nav > li > a.btn.btn-warning-fc:active {
-  background-color: #fcbe05;
-  border: 1px solid #fcbe05;
+  background-color: #faee72;
+  border: 1px solid #faee72;
   color: #fff;
 }
 
@@ -1373,15 +3354,15 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-mo.dropdown-toggle, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-mo.dropdown-toggle:focus, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-mo.dropdown-toggle:hover {
-  background-color: #fcbe05;
+  background-color: #faee72;
   color: #fff;
-  border: 1px solid #fcbe05;
+  border: 1px solid #faee72;
 }
 
 .btn.btn-warning-mo,
 .navbar .navbar-nav > li > a.btn.btn-warning-mo {
   background: 0 0;
-  color: #fcbe05;
+  color: #faee72;
   font-weight: 300;
   box-shadow: none;
 }
@@ -1390,8 +3371,8 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-mo:hover,
 .navbar .navbar-nav > li > a.btn.btn-warning-mo:focus,
 .navbar .navbar-nav > li > a.btn.btn-warning-mo:active {
-  background-color: #fcbe05;
-  border: 1px solid #fcbe05;
+  background-color: #faee72;
+  border: 1px solid #faee72;
   color: #fff;
 }
 
@@ -1408,16 +3389,16 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-outline.dropdown-toggle, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-outline.dropdown-toggle:focus, .open >
 .navbar .navbar-nav > li > a.btn.btn-warning-outline.dropdown-toggle:hover {
-  background-color: #fcbe05;
+  background-color: #faee72;
   color: #fff;
-  border: 1px solid #fcbe05;
+  border: 1px solid #faee72;
 }
 
 .btn.btn-warning-outline,
 .navbar .navbar-nav > li > a.btn.btn-warning-outline {
   background: 0 0;
-  border: 1px solid #fcbe05;
-  color: #fcbe05;
+  border: 1px solid #faee72;
+  color: #faee72;
   font-weight: 300;
   box-shadow: none;
 }
@@ -1426,10 +3407,364 @@ header-filter{
 .navbar .navbar-nav > li > a.btn.btn-warning-outline:hover,
 .navbar .navbar-nav > li > a.btn.btn-warning-outline:focus,
 .navbar .navbar-nav > li > a.btn.btn-warning-outline:active {
-  background-color: #fcbe05;
-  border: 1px solid #fcbe05;
+  background-color: #faee72;
+  border: 1px solid #faee72;
   color: #fff;
 }
+
+/* Social Buttons */
+.btn.btn-facebook,
+.navbar .navbar-nav>li>a.btn.btn-facebook {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(59, 89, 152, .14), 0 3px 1px -2px rgba(59, 89, 152, .2), 0 1px 5px 0 rgba(59, 89, 152, .12)
+}
+
+.btn.btn-facebook:active,
+.btn.btn-facebook:focus,
+.btn.btn-facebook:hover,
+.navbar .navbar-nav>li>a.btn.btn-facebook:active,
+.navbar .navbar-nav>li>a.btn.btn-facebook:focus,
+.navbar .navbar-nav>li>a.btn.btn-facebook:hover {
+    background-color: #3b5998;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(59, 89, 152, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(59, 89, 152, .2)
+}
+
+.btn.btn-facebook.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-facebook.btn-simple {
+    color: #3b5998;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-facebook.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-facebook.btn-white {
+    color: #3b5998;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-twitter,
+.navbar .navbar-nav>li>a.btn.btn-twitter {
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(85, 172, 238, .14), 0 3px 1px -2px rgba(85, 172, 238, .2), 0 1px 5px 0 rgba(85, 172, 238, .12)
+}
+
+.btn.btn-twitter:active,
+.btn.btn-twitter:focus,
+.btn.btn-twitter:hover,
+.navbar .navbar-nav>li>a.btn.btn-twitter:active,
+.navbar .navbar-nav>li>a.btn.btn-twitter:focus,
+.navbar .navbar-nav>li>a.btn.btn-twitter:hover {
+    background-color: #55acee;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(85, 172, 238, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(85, 172, 238, .2)
+}
+
+.btn.btn-twitter.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-twitter.btn-simple {
+    color: #55acee;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-twitter.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-twitter.btn-white {
+    color: #55acee;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-pinterest,
+.navbar .navbar-nav>li>a.btn.btn-pinterest {
+    background-color: #cc2127;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(204, 33, 39, .14), 0 3px 1px -2px rgba(204, 33, 39, .2), 0 1px 5px 0 rgba(204, 33, 39, .12)
+}
+
+.btn.btn-pinterest:active,
+.btn.btn-pinterest:focus,
+.btn.btn-pinterest:hover,
+.navbar .navbar-nav>li>a.btn.btn-pinterest:active,
+.navbar .navbar-nav>li>a.btn.btn-pinterest:focus,
+.navbar .navbar-nav>li>a.btn.btn-pinterest:hover {
+    background-color: #cc2127;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(204, 33, 39, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(204, 33, 39, .2)
+}
+
+.btn.btn-pinterest.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-pinterest.btn-simple {
+    color: #cc2127;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-pinterest.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-pinterest.btn-white {
+    color: #cc2127;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-google,
+.navbar .navbar-nav>li>a.btn.btn-google {
+    background-color: #dd4b39;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(221, 75, 57, .14), 0 3px 1px -2px rgba(221, 75, 57, .2), 0 1px 5px 0 rgba(221, 75, 57, .12)
+}
+
+.btn.btn-google:active,
+.btn.btn-google:focus,
+.btn.btn-google:hover,
+.navbar .navbar-nav>li>a.btn.btn-google:active,
+.navbar .navbar-nav>li>a.btn.btn-google:focus,
+.navbar .navbar-nav>li>a.btn.btn-google:hover {
+    background-color: #dd4b39;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(221, 75, 57, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(221, 75, 57, .2)
+}
+
+.btn.btn-google.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-google.btn-simple {
+    color: #dd4b39;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-google.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-google.btn-white {
+    color: #dd4b39;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-linkedin,
+.navbar .navbar-nav>li>a.btn.btn-linkedin {
+    background-color: #0976b4;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(9, 118, 180, .14), 0 3px 1px -2px rgba(9, 118, 180, .2), 0 1px 5px 0 rgba(9, 118, 180, .12)
+}
+
+.btn.btn-linkedin:active,
+.btn.btn-linkedin:focus,
+.btn.btn-linkedin:hover,
+.navbar .navbar-nav>li>a.btn.btn-linkedin:active,
+.navbar .navbar-nav>li>a.btn.btn-linkedin:focus,
+.navbar .navbar-nav>li>a.btn.btn-linkedin:hover {
+    background-color: #0976b4;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(9, 118, 180, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(9, 118, 180, .2)
+}
+
+.btn.btn-linkedin.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-linkedin.btn-simple {
+    color: #0976b4;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-linkedin.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-linkedin.btn-white {
+    color: #0976b4;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-github,
+.navbar .navbar-nav>li>a.btn.btn-github {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(51, 51, 51, .14), 0 3px 1px -2px rgba(51, 51, 51, .2), 0 1px 5px 0 rgba(51, 51, 51, .12)
+}
+
+.btn.btn-github:active,
+.btn.btn-github:focus,
+.btn.btn-github:hover,
+.navbar .navbar-nav>li>a.btn.btn-github:active,
+.navbar .navbar-nav>li>a.btn.btn-github:focus,
+.navbar .navbar-nav>li>a.btn.btn-github:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(51, 51, 51, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(51, 51, 51, .2)
+}
+
+.btn.btn-github.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-github.btn-simple {
+    color: #333;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-github.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-github.btn-white {
+    color: #333;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-youtube,
+.navbar .navbar-nav>li>a.btn.btn-youtube {
+    background-color: #e52d27;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(229, 45, 39, .14), 0 3px 1px -2px rgba(229, 45, 39, .2), 0 1px 5px 0 rgba(229, 45, 39, .12)
+}
+
+.btn.btn-youtube:active,
+.btn.btn-youtube:focus,
+.btn.btn-youtube:hover,
+.navbar .navbar-nav>li>a.btn.btn-youtube:active,
+.navbar .navbar-nav>li>a.btn.btn-youtube:focus,
+.navbar .navbar-nav>li>a.btn.btn-youtube:hover {
+    background-color: #e52d27;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(229, 45, 39, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(229, 45, 39, .2)
+}
+
+.btn.btn-youtube.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-youtube.btn-simple {
+    color: #e52d27;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-youtube.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-youtube.btn-white {
+    color: #e52d27;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-instagram,
+.navbar .navbar-nav>li>a.btn.btn-instagram {
+    background-color: #125688;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(18, 86, 136, .14), 0 3px 1px -2px rgba(18, 86, 136, .2), 0 1px 5px 0 rgba(18, 86, 136, .12)
+}
+
+.btn.btn-instagram:active,
+.btn.btn-instagram:focus,
+.btn.btn-instagram:hover,
+.navbar .navbar-nav>li>a.btn.btn-instagram:active,
+.navbar .navbar-nav>li>a.btn.btn-instagram:focus,
+.navbar .navbar-nav>li>a.btn.btn-instagram:hover {
+    background-color: #125688;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(18, 86, 136, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(18, 86, 136, .2)
+}
+
+.btn.btn-instagram.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-instagram.btn-simple {
+    color: #125688;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-instagram.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-instagram.btn-white {
+    color: #125688;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-reddit,
+.navbar .navbar-nav>li>a.btn.btn-reddit {
+    background-color: #ff4500;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(255, 69, 0, .14), 0 3px 1px -2px rgba(255, 69, 0, .2), 0 1px 5px 0 rgba(255, 69, 0, .12)
+}
+
+.btn.btn-reddit:active,
+.btn.btn-reddit:focus,
+.btn.btn-reddit:hover,
+.navbar .navbar-nav>li>a.btn.btn-reddit:active,
+.navbar .navbar-nav>li>a.btn.btn-reddit:focus,
+.navbar .navbar-nav>li>a.btn.btn-reddit:hover {
+    background-color: #ff4500;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(255, 69, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(255, 69, 0, .2)
+}
+
+.btn.btn-reddit.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-reddit.btn-simple {
+    color: #ff4500;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-reddit.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-reddit.btn-white {
+    color: #ff4500;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-tumblr,
+.navbar .navbar-nav>li>a.btn.btn-tumblr {
+    background-color: #35465c;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(53, 70, 92, .14), 0 3px 1px -2px rgba(53, 70, 92, .2), 0 1px 5px 0 rgba(53, 70, 92, .12)
+}
+
+.btn.btn-tumblr:active,
+.btn.btn-tumblr:focus,
+.btn.btn-tumblr:hover,
+.navbar .navbar-nav>li>a.btn.btn-tumblr:active,
+.navbar .navbar-nav>li>a.btn.btn-tumblr:focus,
+.navbar .navbar-nav>li>a.btn.btn-tumblr:hover {
+    background-color: #35465c;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(53, 70, 92, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(53, 70, 92, .2)
+}
+
+.btn.btn-tumblr.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-tumblr.btn-simple {
+    color: #35465c;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-tumblr.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-tumblr.btn-white {
+    color: #35465c;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
+.btn.btn-behance,
+.navbar .navbar-nav>li>a.btn.btn-behance {
+    background-color: #1769ff;
+    color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(23, 105, 255, .14), 0 3px 1px -2px rgba(23, 105, 255, .2), 0 1px 5px 0 rgba(23, 105, 255, .12)
+}
+
+.btn.btn-behance:active,
+.btn.btn-behance:focus,
+.btn.btn-behance:hover,
+.navbar .navbar-nav>li>a.btn.btn-behance:active,
+.navbar .navbar-nav>li>a.btn.btn-behance:focus,
+.navbar .navbar-nav>li>a.btn.btn-behance:hover {
+    background-color: #1769ff;
+    color: #fff;
+    box-shadow: 0 14px 26px -12px rgba(23, 105, 255, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(23, 105, 255, .2)
+}
+
+.btn.btn-behance.btn-simple,
+.navbar .navbar-nav>li>a.btn.btn-behance.btn-simple {
+    color: #1769ff;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.btn.btn-behance.btn-white,
+.navbar .navbar-nav>li>a.btn.btn-behance.btn-white {
+    color: #1769ff;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
+}
+
 /*********************
  * 5 - Text Emphasis *
  *********************/
@@ -1456,6 +3791,22 @@ header-filter{
 
 .text-default {
   color: #fa8072;
+}
+
+.text-almond{
+  color: #f2ded3
+}
+
+.text-tangerine {
+  color: #fc9a7d;
+}
+
+.text-pink {
+  color: #fdc3c2;
+}
+
+.text-peach {
+  color: #ffc595;
 }
 
 
@@ -1683,7 +4034,7 @@ footer .pull-center {
 }
 
  /*
- * Cards
+ * 9 - Cards
  */
 
  .card {
@@ -1797,6 +4148,9 @@ footer .pull-center {
    text-decoration: none;
  }
 
+.title {
+  text-align: left;
+}
  .description,
  .card-description,
  .footer-big p {
@@ -1807,744 +4161,12 @@ footer .pull-center {
    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
  }
 
- /* --- Pagination --- */
- .pagination>li>a,
- .pagination>li>span {
-     border: 0;
-     border-radius: 30px!important;
-     transition: all .3s;
-     padding: 0 11px;
-     margin: 0 3px;
-     min-width: 30px;
-     height: 30px;
-     line-height: 30px;
-     color: #999;
-     font-weight: 400;
-     font-size: 12px;
-     text-transform: uppercase;
-     background: 0 0
- }
-
- .pagination>.active>a,
- .pagination>.active>span,
- .pagination>li>a:focus,
- .pagination>li>a:hover,
- .pagination>li>span:focus,
- .pagination>li>span:hover {
-     color: #999;
- }
-
- .pagination>.active>a,
- .pagination>.active>a:focus,
- .pagination>.active>a:hover,
- .pagination>.active>span,
- .pagination>.active>span:focus,
- .pagination>.active>span:hover {
-     background-color: #9c27b0;
-     border-color: #9c27b0;
-     color: #FFF;
-     box-shadow: 0 4px 5px 0 rgba(156, 39, 176, .14), 0 1px 10px 0 rgba(156, 39, 176, .12), 0 2px 4px -1px rgba(156, 39, 176, .2)
- }
-
-/*
-* social buttons
-*/
-
-
-.btn.btn-facebook,
-.navbar .navbar-nav>li>a.btn.btn-facebook {
-    background-color: #3b5998;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(59, 89, 152, .14), 0 3px 1px -2px rgba(59, 89, 152, .2), 0 1px 5px 0 rgba(59, 89, 152, .12)
-}
-
-.btn.btn-facebook:active,
-.btn.btn-facebook:focus,
-.btn.btn-facebook:hover,
-.navbar .navbar-nav>li>a.btn.btn-facebook:active,
-.navbar .navbar-nav>li>a.btn.btn-facebook:focus,
-.navbar .navbar-nav>li>a.btn.btn-facebook:hover {
-    background-color: #3b5998;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(59, 89, 152, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(59, 89, 152, .2)
-}
-
-.btn.btn-facebook.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-facebook.btn-simple {
-    color: #3b5998;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-facebook.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-facebook.btn-white {
-    color: #3b5998;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-twitter,
-.navbar .navbar-nav>li>a.btn.btn-twitter {
-    background-color: #55acee;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(85, 172, 238, .14), 0 3px 1px -2px rgba(85, 172, 238, .2), 0 1px 5px 0 rgba(85, 172, 238, .12)
-}
-
-.btn.btn-twitter:active,
-.btn.btn-twitter:focus,
-.btn.btn-twitter:hover,
-.navbar .navbar-nav>li>a.btn.btn-twitter:active,
-.navbar .navbar-nav>li>a.btn.btn-twitter:focus,
-.navbar .navbar-nav>li>a.btn.btn-twitter:hover {
-    background-color: #55acee;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(85, 172, 238, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(85, 172, 238, .2)
-}
-
-.btn.btn-twitter.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-twitter.btn-simple {
-    color: #55acee;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-twitter.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-twitter.btn-white {
-    color: #55acee;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-pinterest,
-.navbar .navbar-nav>li>a.btn.btn-pinterest {
-    background-color: #cc2127;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(204, 33, 39, .14), 0 3px 1px -2px rgba(204, 33, 39, .2), 0 1px 5px 0 rgba(204, 33, 39, .12)
-}
-
-.btn.btn-pinterest:active,
-.btn.btn-pinterest:focus,
-.btn.btn-pinterest:hover,
-.navbar .navbar-nav>li>a.btn.btn-pinterest:active,
-.navbar .navbar-nav>li>a.btn.btn-pinterest:focus,
-.navbar .navbar-nav>li>a.btn.btn-pinterest:hover {
-    background-color: #cc2127;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(204, 33, 39, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(204, 33, 39, .2)
-}
-
-.btn.btn-pinterest.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-pinterest.btn-simple {
-    color: #cc2127;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-pinterest.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-pinterest.btn-white {
-    color: #cc2127;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-google,
-.navbar .navbar-nav>li>a.btn.btn-google {
-    background-color: #dd4b39;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(221, 75, 57, .14), 0 3px 1px -2px rgba(221, 75, 57, .2), 0 1px 5px 0 rgba(221, 75, 57, .12)
-}
-
-.btn.btn-google:active,
-.btn.btn-google:focus,
-.btn.btn-google:hover,
-.navbar .navbar-nav>li>a.btn.btn-google:active,
-.navbar .navbar-nav>li>a.btn.btn-google:focus,
-.navbar .navbar-nav>li>a.btn.btn-google:hover {
-    background-color: #dd4b39;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(221, 75, 57, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(221, 75, 57, .2)
-}
-
-.btn.btn-google.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-google.btn-simple {
-    color: #dd4b39;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-google.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-google.btn-white {
-    color: #dd4b39;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-linkedin,
-.navbar .navbar-nav>li>a.btn.btn-linkedin {
-    background-color: #0976b4;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(9, 118, 180, .14), 0 3px 1px -2px rgba(9, 118, 180, .2), 0 1px 5px 0 rgba(9, 118, 180, .12)
-}
-
-.btn.btn-linkedin:active,
-.btn.btn-linkedin:focus,
-.btn.btn-linkedin:hover,
-.navbar .navbar-nav>li>a.btn.btn-linkedin:active,
-.navbar .navbar-nav>li>a.btn.btn-linkedin:focus,
-.navbar .navbar-nav>li>a.btn.btn-linkedin:hover {
-    background-color: #0976b4;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(9, 118, 180, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(9, 118, 180, .2)
-}
-
-.btn.btn-linkedin.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-linkedin.btn-simple {
-    color: #0976b4;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-linkedin.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-linkedin.btn-white {
-    color: #0976b4;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-dribbble,
-.navbar .navbar-nav>li>a.btn.btn-dribbble {
-    background-color: #ea4c89;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(234, 76, 137, .14), 0 3px 1px -2px rgba(234, 76, 137, .2), 0 1px 5px 0 rgba(234, 76, 137, .12)
-}
-
-.btn.btn-dribbble:active,
-.btn.btn-dribbble:focus,
-.btn.btn-dribbble:hover,
-.navbar .navbar-nav>li>a.btn.btn-dribbble:active,
-.navbar .navbar-nav>li>a.btn.btn-dribbble:focus,
-.navbar .navbar-nav>li>a.btn.btn-dribbble:hover {
-    background-color: #ea4c89;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(234, 76, 137, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(234, 76, 137, .2)
-}
-
-.btn.btn-dribbble.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-dribbble.btn-simple {
-    color: #ea4c89;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-dribbble.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-dribbble.btn-white {
-    color: #ea4c89;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-github,
-.navbar .navbar-nav>li>a.btn.btn-github {
-    background-color: #333;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(51, 51, 51, .14), 0 3px 1px -2px rgba(51, 51, 51, .2), 0 1px 5px 0 rgba(51, 51, 51, .12)
-}
-
-.btn.btn-github:active,
-.btn.btn-github:focus,
-.btn.btn-github:hover,
-.navbar .navbar-nav>li>a.btn.btn-github:active,
-.navbar .navbar-nav>li>a.btn.btn-github:focus,
-.navbar .navbar-nav>li>a.btn.btn-github:hover {
-    background-color: #333;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(51, 51, 51, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(51, 51, 51, .2)
-}
-
-.btn.btn-github.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-github.btn-simple {
-    color: #333;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-github.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-github.btn-white {
-    color: #333;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-youtube,
-.navbar .navbar-nav>li>a.btn.btn-youtube {
-    background-color: #e52d27;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(229, 45, 39, .14), 0 3px 1px -2px rgba(229, 45, 39, .2), 0 1px 5px 0 rgba(229, 45, 39, .12)
-}
-
-.btn.btn-youtube:active,
-.btn.btn-youtube:focus,
-.btn.btn-youtube:hover,
-.navbar .navbar-nav>li>a.btn.btn-youtube:active,
-.navbar .navbar-nav>li>a.btn.btn-youtube:focus,
-.navbar .navbar-nav>li>a.btn.btn-youtube:hover {
-    background-color: #e52d27;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(229, 45, 39, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(229, 45, 39, .2)
-}
-
-.btn.btn-youtube.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-youtube.btn-simple {
-    color: #e52d27;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-youtube.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-youtube.btn-white {
-    color: #e52d27;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-instagram,
-.navbar .navbar-nav>li>a.btn.btn-instagram {
-    background-color: #125688;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(18, 86, 136, .14), 0 3px 1px -2px rgba(18, 86, 136, .2), 0 1px 5px 0 rgba(18, 86, 136, .12)
-}
-
-.btn.btn-instagram:active,
-.btn.btn-instagram:focus,
-.btn.btn-instagram:hover,
-.navbar .navbar-nav>li>a.btn.btn-instagram:active,
-.navbar .navbar-nav>li>a.btn.btn-instagram:focus,
-.navbar .navbar-nav>li>a.btn.btn-instagram:hover {
-    background-color: #125688;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(18, 86, 136, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(18, 86, 136, .2)
-}
-
-.btn.btn-instagram.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-instagram.btn-simple {
-    color: #125688;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-instagram.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-instagram.btn-white {
-    color: #125688;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-reddit,
-.navbar .navbar-nav>li>a.btn.btn-reddit {
-    background-color: #ff4500;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(255, 69, 0, .14), 0 3px 1px -2px rgba(255, 69, 0, .2), 0 1px 5px 0 rgba(255, 69, 0, .12)
-}
-
-.btn.btn-reddit:active,
-.btn.btn-reddit:focus,
-.btn.btn-reddit:hover,
-.navbar .navbar-nav>li>a.btn.btn-reddit:active,
-.navbar .navbar-nav>li>a.btn.btn-reddit:focus,
-.navbar .navbar-nav>li>a.btn.btn-reddit:hover {
-    background-color: #ff4500;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(255, 69, 0, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(255, 69, 0, .2)
-}
-
-.btn.btn-reddit.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-reddit.btn-simple {
-    color: #ff4500;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-reddit.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-reddit.btn-white {
-    color: #ff4500;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-tumblr,
-.navbar .navbar-nav>li>a.btn.btn-tumblr {
-    background-color: #35465c;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(53, 70, 92, .14), 0 3px 1px -2px rgba(53, 70, 92, .2), 0 1px 5px 0 rgba(53, 70, 92, .12)
-}
-
-.btn.btn-tumblr:active,
-.btn.btn-tumblr:focus,
-.btn.btn-tumblr:hover,
-.navbar .navbar-nav>li>a.btn.btn-tumblr:active,
-.navbar .navbar-nav>li>a.btn.btn-tumblr:focus,
-.navbar .navbar-nav>li>a.btn.btn-tumblr:hover {
-    background-color: #35465c;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(53, 70, 92, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(53, 70, 92, .2)
-}
-
-.btn.btn-tumblr.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-tumblr.btn-simple {
-    color: #35465c;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-tumblr.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-tumblr.btn-white {
-    color: #35465c;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-.btn.btn-behance,
-.navbar .navbar-nav>li>a.btn.btn-behance {
-    background-color: #1769ff;
-    color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(23, 105, 255, .14), 0 3px 1px -2px rgba(23, 105, 255, .2), 0 1px 5px 0 rgba(23, 105, 255, .12)
-}
-
-.btn.btn-behance:active,
-.btn.btn-behance:focus,
-.btn.btn-behance:hover,
-.navbar .navbar-nav>li>a.btn.btn-behance:active,
-.navbar .navbar-nav>li>a.btn.btn-behance:focus,
-.navbar .navbar-nav>li>a.btn.btn-behance:hover {
-    background-color: #1769ff;
-    color: #fff;
-    box-shadow: 0 14px 26px -12px rgba(23, 105, 255, .42), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(23, 105, 255, .2)
-}
-
-.btn.btn-behance.btn-simple,
-.navbar .navbar-nav>li>a.btn.btn-behance.btn-simple {
-    color: #1769ff;
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn.btn-behance.btn-white,
-.navbar .navbar-nav>li>a.btn.btn-behance.btn-white {
-    color: #1769ff;
-    background-color: #FFF;
-    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, .14), 0 3px 1px -2px rgba(153, 153, 153, .2), 0 1px 5px 0 rgba(153, 153, 153, .12)
-}
-
-
-/* Tooltips
-.popover,
-.tooltip-inner {
-    color: #555;
-    line-height: 1.5em;
-    background: #FFF;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
-}*/
-
-/* Ghost specific */
-.author-thumb {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin-top: 6px;
-    margin-right: 9px;
-    border-radius: 100%;
-}
-
-.author-thumb-sing {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin-right: 9px;
-    border-radius: 100%;
-}
-
-.post-date {
-   display: inline-block;
-   margin-left: 8px;
-   padding-left: 12px;
-   border-left: #d5dbde 1px solid;
-   text-transform: uppercase;
-   font-size: 1.3rem;
-   white-space: nowrap;
-}
-
-.post-date-sing {
-   display: inline-block;
-   margin-left: 2px;
-   text-transform: uppercase;
-   font-size: 1.3rem;
-   white-space: nowrap;
-}
-
-.post-meta {
-    display: block;
-    margin: 1.75rem 0 0 0;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    color: #9EABB3;
-}
-
-section {
-  display:block;
-  color: #aaaaaa;
-}
-
-.post-content {
-  color: #aaaaaa;
-}
-
-.post-footer {
-    position: relative;
-    margin: 6rem 0 0 0;
-    padding: 3rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
-}
-
-.post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.post-footer p {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    line-height: 1.75em;
-}
-.post-footer .author {
-    margin-right: 180px;
-}
-
-.post-footer h4 a {
-    color: #2e2e2e;
-    text-decoration: none;
-}
-
-.post-footer h4 a:hover {
-    text-decoration: underline;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 3rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
-}
-
-.post-footer .share .icon-twitter:hover {
-    color: #55acee;
-}
-.post-footer .share .icon-facebook:hover {
-    color: #3b5998;
-}
-.post-footer .share .icon-google-plus:hover {
-    color: #dd4b39;
-}
-
-.author-image {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -40px;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    overflow: hidden;
-    padding: 6px;
-    background: #fff;
-    z-index: 2;
-    box-shadow: #E7EEF2 0 0 0 1px;
-}
-
-.author-image .img {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 100%;
-}
-
-.author-profile .author-image {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 120px;
-    height: 120px;
-    padding: 3px;
-    margin: -100px auto 0 auto;
-    box-shadow: none;
-}
-
-
-.author-title {
-    margin: 1.5rem 0 1rem;
-}
-
-.author-bio {
-    font-size: 1.8rem;
-    line-height: 1.5em;
-    font-weight: 200;
-    color: #50585D;
-    letter-spacing: 0;
-    text-indent: 0;
-}
-
-.author-meta {
-    margin: 1.6rem 0;
-}
-/* Location, website, and link */
-.author-profile .author-meta {
-    margin: 2rem 0;
-    letter-spacing: 0.01rem;
-    font-size: 1.7rem;
-}
-.author-meta span {
-    display: inline-block;
-    align: center;
-    margin: 0 2rem 1rem 0;
-    word-wrap: break-word;
-}
-.author-meta a {
-    text-decoration: none;
-}
-
-.author-meta span i {
-  vertical-align: bottom !important;
-}
-
-.stats-meta span {
-  display: inline-block;
-  margin: 0 2rem 1rem 0;
-  word-wrap: break-word;
-}
-
-.stats-meta span i {
-  font-size: 1.5re  vertical-align: middle !important;
-}
-
-
-/* icons */
-.icon-stats:before {
-    content: "\f606";
-}
-
-
-/*  --- Subscription Stuff --= */
-
-.gh-subscribe {
-    text-align: center;
-}
-
-.gh-subscribe-title {
-    margin-bottom: 0;
-    font-size: 2.4rem
-}
-
-.gh-subscribe p {
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-.gh-subscribe form {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 0 0;
-}
-
-.gh-subscribe .form-group {
-    flex-grow: 1;
-    max-width: 300px;
-}
-
-.gh-subscribe .subscribe-email {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    border-radius: 4px 0 0 4px;
-    transition: all ease 0.5s;
-}
-
-.gh-subscribe .subscribe-email:focus {
-    border: #5ba4e5 1px solid;
-    transition: all ease 0.2s;
-}
-
-.gh-subscribe button {
-    margin-left: -1px;
-    border-radius: 0 4px 4px 0;
-}
-
-.gh-subscribe-rss {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.4em;
-}
-
-.subscribe-button {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
-    height: 38px;
-    padding: 0 20px;
-    color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
-    text-align: center;
-    font-size: 12px;
-    font-family: "Open Sans", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    line-height: 35px;
-    border-radius: 3px;
-    background: #fff;
-    transition: all ease 0.3s;
-}
-.subscribe-button:before {
-    font-size: 9px;
-    margin-right: 6px;
-}
-
-.close {
-  font-size: inherit;
-  color: #FFFFFF;
-  opacity: .9;
-  text-shadow: none;
-}
-.close:hover, .close:focus {
-  opacity: 1;
-  color: #FFFFFF;
-}
-.close i {
-  font-size: 20px;
+ /*
+ * 10. Tables
+ */
+
+th:first-of-type {
+  text-align: left;
+  font-weight: 300;
+  padding-right: 50px;
 }
