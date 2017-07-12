@@ -1,0 +1,4 @@
+almond - f2ded3
+tangerine - fc9a7d
+pink - fdc3c2
+peach - ffc595
